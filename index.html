@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0c0d14">
+
+    <title>CalcNova</title>
+
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%230c0d14'/%3E%3Ctext x='50' y='70' font-size='62' font-family='Arial' font-weight='bold' text-anchor='middle' fill='%23a18aff'%3EN%3C/text%3E%3C/svg%3E">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <a href="#home" class="logo" aria-label="NOVA home">
+            <span class="logo-icon">N</span>
+            <span>NOVA<span class="logo-dot"></span></span>
+        </a>
+
+        <nav aria-label="Main navigation">
+            <a href="#home">Home</a>
+            <a href="#calculator">Calculator</a>
+            <a href="#about">About</a>
+        </nav>
+
+        <button id="themeBtn" class="theme-btn"
+                type="button" aria-label="Switch to light theme"
+                title="Toggle theme">☀</button>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <span class="tag">SMART CALCULATION EXPERIENCE</span>
+
+                <h1>
+                    Numbers made<br>
+                    <span>beautiful.</span>
+                </h1>
+
+                <p>
+                    A smarter way to calculate. Experience simplicity,
+                    speed and precision with a modern calculator
+                    designed for your everyday calculations.
+                </p>
+
+                <a href="#calculator" class="hero-btn">
+                    Start Calculating <span aria-hidden="true">↗</span>
+                </a>
+
+                <div class="hero-stats">
+                    <div>
+                        <h3>100%</h3>
+                        <p>Free to use</p>
+                    </div>
+                    <div>
+                        <h3>Instant</h3>
+                        <p>Fast results</p>
+                    </div>
+                    <div>
+                        <h3>Responsive</h3>
+                        <p>All devices</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual" id="calculator">
+                <div class="calculator">
+                    <div class="calculator-heading">
+                        <div>
+                            <span class="eyebrow">NOVA CALCULATOR</span>
+                            <h2>Standard Mode</h2>
+                        </div>
+
+                        <span class="live-status">
+                            <span></span> READY
+                        </span>
+                    </div>
+
+                    <div class="display">
+                        <div id="history" class="history"
+                             aria-live="polite"></div>
+
+                        <input id="display" type="text" value="0"
+                               readonly aria-label="Calculator display">
+                    </div>
+
+                    <div class="keypad" id="keypad">
+                        <button class="key utility" data-action="clear"
+                                type="button">AC</button>
+                        <button class="key utility" data-action="delete"
+                                type="button">DEL</button>
+                        <button class="key utility" data-action="percent"
+                                type="button">%</button>
+                        <button class="key operator" data-operator="/"
+                                type="button" aria-label="Divide">÷</button>
+
+                        <button class="key" data-number="7" type="button">7</button>
+                        <button class="key" data-number="8" type="button">8</button>
+                        <button class="key" data-number="9" type="button">9</button>
+                        <button class="key operator" data-operator="*"
+                                type="button" aria-label="Multiply">×</button>
+
+                        <button class="key" data-number="4" type="button">4</button>
+                        <button class="key" data-number="5" type="button">5</button>
+                        <button class="key" data-number="6" type="button">6</button>
+                        <button class="key operator" data-operator="-"
+                                type="button" aria-label="Subtract">−</button>
+
+                        <button class="key" data-number="1" type="button">1</button>
+                        <button class="key" data-number="2" type="button">2</button>
+                        <button class="key" data-number="3" type="button">3</button>
+                        <button class="key operator" data-operator="+"
+                                type="button" aria-label="Add">+</button>
+
+                        <button class="key utility" data-action="sign"
+                                type="button">+/−</button>
+                        <button class="key" data-number="0" type="button">0</button>
+                        <button class="key" data-action="decimal"
+                                type="button">.</button>
+                        <button class="key equals" data-action="equals"
+                                type="button">=</button>
+                    </div>
+
+                    <div class="calculator-bottom">
+                        <span class="keyboard-indicator">
+                            <span class="keyboard-dot"></span>
+                            Keyboard enabled
+                        </span>
+                        <button id="copyBtn" class="copy-btn"
+                                type="button">Copy result</button>
+                    </div>
+
+                    <p id="feedback" class="feedback" aria-live="polite"></p>
+                </div>
+            </div>
+        </section>
+        <section class="about-section" id="about">
+            <div class="about-content">
+                <span class="tag">ABOUT NOVA</span>
+                <h2>Designed for clarity.<br><span>Built for simplicity.</span></h2>
+
+                <p>
+                    NOVA It combines essential mathematical
+                    operations with a modern interface, keyboard controls
+                    and responsive styling.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <a href="#home" class="footer-logo">NOVA</a>
+        <p>© 2026 NOVA CALCULATOR</p>
+        <a href="#home" class="back-top">Back to top ↑</a>
+    </footer>
+</body>
+</html> 
